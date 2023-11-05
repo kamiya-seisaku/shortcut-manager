@@ -1,0 +1,42 @@
+#1 窓 Popup Window Operator
+class ShortcutOrganizerPopupOperator(bpy.types.Operator):
+    bl_idname = "object.shortcut_organizer_popup"
+    bl_label = "Shortcut Organizer Popup"
+    
+    def poll(cls, context):
+    def poll(cls, context):
+    def invoke(self, context, event):
+    def draw(self, context):
+    def execute(self, context):
+
+#2 キー入力 Assign Key Operator
+class AssignKeyOperator(bpy.types.Operator)
+    bl_idname = "object.assign_key"
+    bl_label = "Assign Key"
+    
+    def execute(self, context):
+
+# not used #3 Main Class for the Addon
+# class ShortcutOrganizer(bpy.types.Operator):
+#     bl_idname = "object.shortcut_organizer"
+#     bl_label = "Shortcut Organizer"
+# 
+#     def draw(self, context):
+
+#4 Panel class for the Property Window
+class OBJECT_PT_ShortcutOrganizerPropertyPanel(bpy.types.Panel):
+    bl_idname = "OBJECT_PT_ShortcutOrganizerPropertyPanel"
+    bl_label = "Shortcut Organizer"
+    bl_space_type = 'PROPERTIES'
+    bl_region_type = 'WINDOW'
+    bl_context = "object"
+
+#5 Context menu to add Popup
+def add_context_menu(self, context):
+
+#6 Reload Addon Operator
+class ReloadAddonOperator(bpy.types.Operator):
+    bl_idname = "object.reload_addon"
+    bl_label = "Reload Addon"
+
+# Registration/Unregistration
