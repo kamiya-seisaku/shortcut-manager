@@ -64,15 +64,15 @@ class AssignKeyOperator(bpy.types.Operator):
         # Your code to assign the key stroke
         return {'FINISHED'}
 
-#3 Panel class for the Property Window
-class OBJECT_PT_ShortcutOrganizerPropertyPanel(bpy.types.Panel):
-    # Blender Python Tutorial : An Introduction to Scripting [how to learn python for beginners] https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
+#3 Panel class (3D Tool shelf)
+class ShortcutOrganizerPanel(bpy.types.Panel):
+    # From Blender Python Tutorial : An Introduction to Scripting [how to learn python for beginners] https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
     bl_label = "Shortcut Organizer"
     bl_idname = "PT_ShortcutOrganizerPanel"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = "ShortcutOrganizer"
-    # bl_idname = "OBJECT_PT_ShortcutOrganizerPropertyPanel"
+    # bl_idname = "ShortcutOrganizerPanel"
     # bl_label = "Shortcut Organizer"
     # bl_space_type = 'PROPERTIES'
     # bl_region_type = 'WINDOW'
@@ -101,7 +101,7 @@ class ReloadAddonOperator(bpy.types.Operator):
 # Registration/Unregistration
 
 # all classes to be regietered/unregisterd in this file
-classes = [OBJECT_PT_ShortcutOrganizerPropertyPanel, ReloadAddonOperator, AssignKeyOperator, ShortcutOrganizerPopupOperator]
+classes = [ShortcutOrganizerPanel, ReloadAddonOperator, AssignKeyOperator, ShortcutOrganizerPopupOperator]
 
 # all bpy.types which end with '_context_menu'
 context_menu_types = [menu for menu in dir(bpy.types) if menu.endswith('_context_menu')]
